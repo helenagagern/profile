@@ -16,6 +16,7 @@ h1 {
   color: #615D6C;
   font-size: 30px;
   line-height: 4px;
+  padding-bottom: 24px;
 }
 
 p {
@@ -24,7 +25,7 @@ p {
 
 .my_button {
   color: white;
-  padding: 16px 35px;
+  padding: 24px 35px;
   text-decoration: none;
   background-color: #615D6C;
   border-radius: 3px;
@@ -74,10 +75,10 @@ ul {
 .card {
   border: 1px solid lightgrey;
   position: relative;
-  z-index: 6;
   width: 40vw;
   margin: 0 auto 16px auto;
   padding: 40px;
+  z-index: 6;
 }
 
 
