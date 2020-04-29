@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:300|Open+Sans:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway:700&display=swap');
+
+body {
+  background-color: #CAE5FF;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 300;
+  color: rgb(50, 50, 50);
+  font-size: 20px
+  line-height: 2px
+}
+
+h1 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  color: #615D6C;
+  font-size: 30px
+  line-height: 4px;
+}
+
+p {
+  padding: 16px;
+}
+
+.my_button {
+  color: white;
+  padding: 16px 35px;
+  text-decoration: none;
+  background-color: #615D6C;
+  border-radius: 3px;
+  box-shadow: box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  transition: 0.7s;
+  margin: 16px auto;
+}
+
+ul {
+  color: #89BBFE;
+  text-decoration: none;
+  list-style: none;
+  padding: 24px;
+}
+
+.my_button:hover {
+  color: #ACEDFF;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+}
+
+.container {
+    background-color: white;
+    padding: 40px;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.img-circle {
+  border-radius: 50%;
+}
+
+/*Why didn't it work when I did list style inside this method?*/
+.list-inline > li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.list-inline {
+  list-style: none;
+  padding-left: 0px;
+}
+
+.card {
+  border: 1px solid lightgrey;
+  position: relative;
+  z-index: 6;
+  width: 40vw;
+  margin: 0 auto 16px auto;
+  height: 500px;
+}
+
+.card-bottom {
+  border: 1px solid lightgrey;
+  position: relative;
+  z-index: 6;
+  width: 40vw;
+  margin: 0 auto 16px auto;
+  height: 100px;
+}
+
+@media (max-width: 960px) {
+  /* For a screen < 960px, this CSS will be read */
+  .container {
+    width: 700px;
+  }
+}
+@media (max-width: 720px) {
+  /* For a screen < 720px, this CSS will be read */
+  .container {
+    width: 500px;
+  }
+}
+@media (max-width: 540px) {
+  /* For a screen < 540px, this CSS will be read */
+  .container {
+    width: 300px;
+  }
+}
+
+
+.skewed,
+.skewed2,
+.skewed3 {
+  position: absolute;
+  top: -100%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  transform: skewY(6deg);
+  transform-origin: top right;
+}
+
+.skewed::before,
+.skewed2::before,
+.skewed3::before {
+  position: relative;
+  content:"";
+  display: block;
+  width: 100%;
+  height: 30%;
+  top:-29%;
+  z-index: 1;
+}
+
+.skewed::before {
+  background: #abd1df;
+}
+
+.skewed2::before {
+  background:#64b3c4;
+}
+
+.skewed3::before {
+  background:#467a9b;
+}
+
+.skewed {
+  background: #abd1df;
+  transform: skewY(6deg);
+  transform-origin: top right;
+  animation: goDown 1s ease-in 0s 1 forwards;
+}
+
+.skewed2 {
+  background:#64b3c4;
+  transform: skewY(-6deg);
+  transform-origin: 0 0;
+  animation: goDown 1s ease-in 0.4s 1 forwards;
+}
+
+.skewed3 {
+  background:#467a9b;
+  transform: skewY(6deg);
+  transform-origin: top right;
+  animation: goDown 1s ease-in 0.8s 1 forwards;
+}
+
+@keyframes goDown{
+    0%{ top: -100%;}
+    100%{ top: 20%;}
+}
+
+.circle__area {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle {
+  width: 10vw;
+  height: 10vw;
+  border-radius: 100%;
+  background-color: #fff;
+  opacity: 0;
+  animation: expansion 1s ease-in-out 2s 1 forwards;
+}
+
+@keyframes expansion {
+    0%{ opacity: 1; width: 10vw; height: 10vw; border-radius: 100%;}
+    20%{ opacity: 1; width: 5vw; height: 5vw; border-radius: 100%;}
+    99%{ opacity: 1; width: 99vw; height: 99vw; border-radius: 100%;}
+    100%{ opacity: 1; width: 100%; height: 100%; border-radius: 0;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
